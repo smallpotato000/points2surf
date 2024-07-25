@@ -72,7 +72,7 @@ def get_voxel_centers_grid_smaller_pc(pts, grid_resolution, distance_threshold_v
 
 def model_space_to_volume_space(pts_ms, vol_res):
     pts_pos_octant = (pts_ms + 1.0) / 2.0
-    return np.floor(pts_pos_octant * vol_res).astype(np.int)
+    return np.floor(pts_pos_octant * vol_res).astype(np.int64)
 
 
 def volume_space_to_model_space(pts_vs, vol_res):
